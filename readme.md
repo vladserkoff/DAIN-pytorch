@@ -13,7 +13,7 @@ from dain_pytorch import DAINLayer
 dain = DAINLayer(num_inputs=...)
 ```
 
-Note that DAIN uses a sigmoid to scale the input, and it could easily saturate if your data hase large min-max difference, so either preprocess your data or choose initialization carefully by overriding `_init_weights` method.
+Note that DAIN uses a sigmoid to scale the input, and it could easily saturate if your data has a large min-max difference, so either preprocess your data or choose initialization carefully by overriding `_init_weights` method.
 
 ## TODO
 
