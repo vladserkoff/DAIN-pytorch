@@ -12,7 +12,7 @@ class DAINLayer(nn.Module):
     https://arxiv.org/abs/1902.07892
 
     Input : (B, L, C), where `B` is a batch dimension, `L` is
-        the lenght of the time series, `C` is the number of
+        the length of the time series, `C` is the number of
         features (channels) in the time series.
     Output : (B, L, C)
     """
