@@ -40,9 +40,9 @@ class DAINLayer(nn.Module):
             Expected shape is (B, L, C).
         """
         s1 = inputs.mean(dim=1, keepdim=True).transpose(1, 2)
-        a = self._batch_diagonal(self.alpha(s1))
+        a = _batch_diagonal(self.alpha(s1))
         s2 = (inputs - a).mean(dim=1, keepdim=True).transpose(1, 2)
-        b = self._batch_diagonal(self.beta(s2)).sigmoid()
+        b = _batch_diagonal(self.beta(s2)).sigmoid()
         out = (inputs - a) * b
         return out
 
